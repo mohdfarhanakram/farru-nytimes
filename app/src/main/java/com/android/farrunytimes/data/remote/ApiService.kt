@@ -1,6 +1,6 @@
 package com.android.farrunytimes.data.remote
 
-import com.android.farrunytimes.domain.NewsInfo
+import com.android.farrunytimes.domain.model.NewsInfo
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

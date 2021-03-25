@@ -1,4 +1,4 @@
-package com.android.farrunytimes.domain
+package com.android.farrunytimes.domain.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,6 +1,6 @@
 package com.android.farrunytimes.data.repository
 
-import com.android.farrunytimes.domain.NewsInfo
+import com.android.farrunytimes.domain.model.NewsInfo
 
 /**
  *   Created by Mohd Farhan on 24/03/2021.

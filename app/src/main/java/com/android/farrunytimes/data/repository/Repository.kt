@@ -1,7 +1,7 @@
 package com.android.farrunytimes.data.repository
 
 import com.android.farrunytimes.data.remote.ApiService
-import com.android.farrunytimes.domain.NewsInfo
+import com.android.farrunytimes.domain.model.NewsInfo
 import javax.inject.Inject
 
 /**
