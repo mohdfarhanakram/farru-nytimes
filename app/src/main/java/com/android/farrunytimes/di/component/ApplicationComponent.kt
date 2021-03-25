@@ -2,6 +2,7 @@ package com.android.farrunytimes.di.component
 
 import com.android.farrunytimes.di.module.AppModule
 import com.android.farrunytimes.di.module.NetworkModule
+import com.android.farrunytimes.di.module.SubComponentsModule
 import com.android.farrunytimes.di.scope.ApplicationScope
 import dagger.Component
 
@@ -10,7 +11,7 @@ import dagger.Component
  */
 
 @ApplicationScope
-@Component(modules = [NetworkModule::class,AppModule::class])
+@Component(modules = [NetworkModule::class,AppModule::class,SubComponentsModule::class])
 interface ApplicationComponent {
-
+    fun loginComponent() : NewsListComponent.Factory
 }

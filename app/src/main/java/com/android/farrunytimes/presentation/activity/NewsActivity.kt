@@ -1,12 +1,14 @@
 package com.android.farrunytimes.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.android.farrunytimes.R
+import android.os.PersistableBundle
 
-class MainActivity : AppCompatActivity() {
+/**
+ *   Created by Mohd Farhan on 25/03/2021.
+ */
+class NewsActivity : BaseActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
     }
 }

@@ -1,6 +1,9 @@
 package com.android.farrunytimes.di.component
 
 import com.android.farrunytimes.di.scope.ActivityScope
+import com.android.farrunytimes.presentation.activity.NewsActivity
+import com.android.farrunytimes.presentation.fragment.NewsDetailFragment
+import com.android.farrunytimes.presentation.fragment.NewsListFragment
 import dagger.Subcomponent
 
 /**
@@ -10,4 +13,12 @@ import dagger.Subcomponent
 @Subcomponent
 interface NewsListComponent {
 
+    @Subcomponent.Factory
+    interface Factory {
+        fun create() : NewsListComponent
+    }
+
+    fun inject(newsActivity: NewsActivity)
+    fun inject(newsListFragment: NewsListFragment)
+    fun inject(newsDetailFragment: NewsDetailFragment)
 }
