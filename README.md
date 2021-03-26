@@ -21,6 +21,17 @@ Build a simple app to hit the NY Times Most Popular Articles API and show a list
 <h4><i>LiveData</i></h4> - observer-pattern implementation for View interaction
 </li>
 
+<li><h3>ViewModel</h3>
+<h4><i>LiveData</i></h4> - observer-pattern implementation for View interaction
+</li>
+
+<li><h3>View</h3>
+<h4><i>Data Binding</i></h4> 
+       - Use data binding to bind the data with UI
+       - The expression language allows you to write expressions that connect variables to the views in the layout.  
+       - Binding Library automatically generates the classes required to bind the views in the layout with your data objects
+</li>
+
 </ul>
 
 
