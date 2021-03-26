@@ -22,7 +22,7 @@ class SplashActivity : BaseActivity() {
     }
 
     private fun navigateToNext(){
-        val intent  = Intent(this,NewsActivity::class.java)
+        val intent  = Intent(this,NYTimesActivity::class.java)
         startActivity(intent)
         finish()
     }

@@ -2,6 +2,8 @@ package com.android.farrunytimes.di.module
 
 import android.util.Log
 import com.android.farrunytimes.data.remote.ApiService
+import com.android.farrunytimes.data.repository.IRepository
+import com.android.farrunytimes.data.repository.Repository
 import com.android.farrunytimes.di.qualifier.BaseUrlString
 import com.android.farrunytimes.di.scope.ApplicationScope
 import com.google.gson.Gson
@@ -21,6 +23,12 @@ import java.util.concurrent.TimeUnit
 
 @Module
 class NetworkModule {
+
+    @Provides
+    @ApplicationScope
+    fun provideRepository(apiService: ApiService): IRepository {
+        return Repository(apiService)
+    }
 
     @Provides
     @ApplicationScope
