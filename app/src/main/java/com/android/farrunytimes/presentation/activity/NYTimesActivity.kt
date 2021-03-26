@@ -2,6 +2,9 @@ package com.android.farrunytimes.presentation.activity
 
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import com.android.farrunytimes.NyTimeApplication
 import com.android.farrunytimes.R
 import com.android.farrunytimes.databinding.ActivityNyTimesBinding
@@ -13,24 +16,20 @@ import javax.inject.Inject
  */
 class NYTimesActivity : BaseActivity() {
     lateinit var binding: ActivityNyTimesBinding
-
-    @Inject
-    lateinit var newsListViewModel: NewsListViewModel
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding  = DataBindingUtil.setContentView(this, R.layout.activity_ny_times)
-        binding.btnClick.setOnClickListener {
-            newsListViewModel.fetchNewsList()
-        }
-        val newsListComponent = (applicationContext as NyTimeApplication).applicationComponent.loginComponent().create()
-        newsListComponent.inject(this)
 
-        newsListViewModel.responseLiveData().observe(this){
-          showMessage(it.toString())
-        }
+        val navHostFragment: NavHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
 
+    }
 
+    fun getNavController(): NavController {
+        return navController
     }
 
 

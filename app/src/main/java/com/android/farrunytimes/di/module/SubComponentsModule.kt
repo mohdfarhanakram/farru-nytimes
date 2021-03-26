@@ -9,4 +9,5 @@ import dagger.Module
 
 @Module(subcomponents = [NewsListComponent::class])
 class SubComponentsModule {
+
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="news"
+            type="com.android.farrunytimes.domain.model.News"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIv"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher"/>
+
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userIv"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black"
+            android:text='@{news.title}'
+            tools:text="Case of the Cinnamon Toast The CuriousCrunch Box"/>
+
+        <TextView
+            android:id="@+id/authorTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/titleTv"
+            app:layout_constraintEnd_toEndOf="@id/titleTv"
+            app:layout_constraintTop_toBottomOf="@id/titleTv"
+            android:text='@{news.byLine}'
+            android:textColor="@color/grey_text_color"
+            android:singleLine="true"
+            tools:text="By DAVID LEO"/>
+
+
+        <TextView
+            android:id="@+id/sourceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="@id/titleTv"
+            app:layout_constraintEnd_toEndOf="@id/titleTv"
+            app:layout_constraintTop_toBottomOf="@id/authorTv"
+            android:text='@{news.source}'
+            android:textColor="@color/grey_text_color"
+            android:textSize="@dimen/_12ssp"
+            android:singleLine="true"
+            tools:text="Source"/>
+
+        <ImageView
+            android:id="@+id/dateIv"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_calendar"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/titleTv"
+            app:layout_constraintTop_toBottomOf="@id/sourceTv"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/publishDateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/dateIv"
+            app:layout_constraintTop_toTopOf="@id/dateIv"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/grey_text_color"
+            android:text='@{news.publishedDate}'
+            android:singleLine="true"
+            android:textSize="@dimen/_10ssp"
+            tools:text="2021-03-26"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

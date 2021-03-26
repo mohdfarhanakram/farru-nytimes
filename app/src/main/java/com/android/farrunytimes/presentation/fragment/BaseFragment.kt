@@ -1,14 +1,24 @@
 package com.android.farrunytimes.presentation.fragment
 
+import android.content.Context
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import com.android.farrunytimes.domain.model.Response
 import com.android.farrunytimes.presentation.activity.BaseActivity
+import com.android.farrunytimes.presentation.activity.NYTimesActivity
+import com.android.farrunytimes.presentation.vm.NewsListViewModel
+import javax.inject.Inject
 
 /**
  *   Created by Mohd Farhan on 25/03/2021.
  */
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment : Fragment(),View.OnClickListener {
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+    }
 
 
     var loaderView : View? = null;
@@ -48,9 +58,8 @@ abstract class BaseFragment : Fragment() {
     }
 
 
-   /* public fun getNavController() : NavController?{
-        return (activity as NewsListActivity).getNavController()
-    }*/
-
+   fun getNavController() : NavController?{
+        return (activity as NYTimesActivity).getNavController()
+   }
 
 }

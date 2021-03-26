@@ -4,6 +4,7 @@ package com.android.farrunytimes.presentation.vm
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.android.farrunytimes.data.remote.ApiError
+import com.android.farrunytimes.di.scope.ActivityScope
 import com.android.farrunytimes.domain.model.NewsInfo
 import com.android.farrunytimes.domain.model.NewsRequest
 import com.android.farrunytimes.domain.model.Response
@@ -18,12 +19,18 @@ class NewsListViewModel @Inject constructor(
     private val newsUseCase: NewsUseCase
 ): BaseVM() {
 
+    private lateinit var mResult: NewsInfo
+
 
     fun fetchNewsList() {
-        liveData.postValue(Response.Loading)
+        if(this::mResult.isInitialized){
+            return
+        }
 
+        liveData.postValue(Response.Loading)
         newsUseCase.invoke(viewModelScope, NewsRequest(), object : UseCaseResponse<NewsInfo> {
             override fun onSuccess(result: NewsInfo) {
+                mResult = result
                 liveData.postValue(Response.Success(result))
             }
 

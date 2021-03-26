@@ -13,5 +13,5 @@ import dagger.Component
 @ApplicationScope
 @Component(modules = [NetworkModule::class,AppModule::class,SubComponentsModule::class])
 interface ApplicationComponent {
-    fun loginComponent() : NewsListComponent.Factory
+    fun newsListComponent() : NewsListComponent.Factory
 }
