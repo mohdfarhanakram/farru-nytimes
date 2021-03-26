@@ -15,6 +15,7 @@ fun ImageView.setImageUrl(url: String?){
     Glide.with(context)
         .load(url)
         .placeholder(R.mipmap.ic_launcher)
+        .error(R.mipmap.ic_launcher)
         .into(this);
 
 }
