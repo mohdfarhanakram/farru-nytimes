@@ -36,6 +36,13 @@ Build a simple app to hit the NY Times Most Popular Articles API and show a list
 </li>
 
 <li>
+<h4><i>Constraint Layout</i></h4> 
+       - Build a Responsive UI with ConstraintLayout.<br/>
+       - News Listing & Detail screen is responsive<br/>  
+       - Design layouts with a flat view hierarchy (no nested view groups)<br/>
+</li>
+
+<li>
 <h4><i>Dagger-2</i></h4> 
        - Dependency Injection.<br/>
        - Testable code & Maintainable code<br/>  
@@ -44,9 +51,9 @@ Build a simple app to hit the NY Times Most Popular Articles API and show a list
 
 <li>
 <h4><i>Gradle</i></h4> 
-       - Libraries<br/>
+       - Dependencies<br/>
        - Build Type<br/>  
-       - Flavour<br/>
+     
 </li>
 <li>
 
