@@ -3,7 +3,6 @@ package com.android.farrunytimes.di.module
 import com.android.farrunytimes.di.qualifier.BaseUrlString
 import com.android.farrunytimes.di.qualifier.KeyString
 import com.android.farrunytimes.di.scope.ApplicationScope
-import com.tuyenmonkey.mkloader.BuildConfig
 import dagger.Module
 import dagger.Provides
 

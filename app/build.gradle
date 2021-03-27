@@ -47,21 +47,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    /*flavorDimensions "env"
-    productFlavors {
-        dev {
-            dimension "env"
-            buildConfigField 'String', 'BASE_URL', '"https://api.nytimes.com/svc/mostpopular/v2/"'
-            buildConfigField 'String', 'API_KEY', '"QG7V7GJlPb4HVhSVoQodw3mlC2kGPtPZ"'
-        }
-
-        live {
-            dimension "env"
-            buildConfigField 'String', 'BASE_URL', '"https://api.nytimes.com/svc/mostpopular/v2/"'
-            buildConfigField 'String', 'API_KEY', '"QG7V7GJlPb4HVhSVoQodw3mlC2kGPtPZ"'
-        }
-    }*/
-
 }
 
 dependencies {
