@@ -55,6 +55,7 @@ Build a simple app to hit the NY Times Most Popular Articles API and show a list
        - Written two unit test case to test NewsListViewModel<br/>
        - Check API Status. -OK<br/>  
        - Check API response having news list.<br/>
+       - Created Fake Repository to test this use case.<br/>
 </li>
 </ul>
 

@@ -18,7 +18,7 @@ interface NewsListComponent {
         fun create() : NewsListComponent
     }
 
-    fun inject(NYTimesActivity: NYTimesActivity)
+    fun inject(nYTimesActivity: NYTimesActivity)
     fun inject(newsListFragment: NewsListFragment)
     fun inject(newsDetailFragment: NewsDetailFragment)
 }
