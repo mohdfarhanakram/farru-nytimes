@@ -48,7 +48,14 @@ Build a simple app to hit the NY Times Most Popular Articles API and show a list
        - Build Type<br/>  
        - Flavour<br/>
 </li>
+<li>
 
+<li><h3>Unit Test Case</h3>
+<h4><i>NewsListViewModelTest</i></h4> 
+       - Written two unit test case to test NewsListViewModel<br/>
+       - Check API Status. -OK<br/>  
+       - Check API response having news list.<br/>
+</li>
 </ul>
 
 
